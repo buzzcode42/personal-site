@@ -1,4 +1,4 @@
-# How to start the Boilerplate
+# How to start the Website Project
 
 This project was started with [Next.js](https://nextjs.org/)
 
@@ -33,4 +33,4 @@ To install all dependencies run `yarn install or yarn` at the root
   - e.g - Branch name is bug/bw-(number)
 - Once done push your branch to origin and submit a PR to the Develop branch for review 😘
 
-## All Rights Reserved for Creative Labs & Co.
+## All Rights Reserved for Fernando dos Santos.
