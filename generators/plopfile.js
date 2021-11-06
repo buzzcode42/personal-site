@@ -22,6 +22,7 @@ module.exports = (plop) => {
       }
     ]
   })
+
   plop.setGenerator('template', {
     description: 'Create a template',
     prompts: [
@@ -35,7 +36,7 @@ module.exports = (plop) => {
       {
         type: 'add',
         path: '../src/templates/{{pascalCase name}}/index.tsx',
-        templateFile: 'templates/Template.tsx.hbs'
+        templateFile: 'templates/Component.tsx.hbs'
       },
       {
         type: 'add',
