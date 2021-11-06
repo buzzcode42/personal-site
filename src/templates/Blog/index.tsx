@@ -1,21 +1,18 @@
+import { Container, Article, Banner } from 'components'
 import { CardProps } from 'components/Card'
 import { TextContentProps } from 'components/TextContent'
-import { Article, Banner, Container, Newsletter } from 'components'
 import { Base } from 'templates'
 
-export type HomeProps = {
+export type BlogProps = {
+  articles: CardProps[]
   banner: TextContentProps[]
-  article: CardProps[]
 }
-
-const Home = ({ article, banner }: HomeProps) => (
+const Blog = ({ articles, banner }: BlogProps) => (
   <Base>
     <Banner items={banner} />
     <Container>
-      <Article items={article} />
+      <Article items={articles} />
     </Container>
-    <Newsletter />
   </Base>
 )
-
-export default Home
+export default Blog

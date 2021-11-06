@@ -1,9 +1,33 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
+import data from './mock'
 import * as S from './styles'
 
 const Menu = () => (
-  <S.Wrapper>
-    <h1>Menu</h1>
-  </S.Wrapper>
+  <S.Header>
+    <S.LinkWrapper>
+      <Link href="/" passHref>
+        <a>
+          <Image
+            src="/img/logo.svg"
+            alt="Fernando dos Santos Logo"
+            width={120}
+            height={90}
+          />
+        </a>
+      </Link>
+    </S.LinkWrapper>
+    <S.Menu>
+      {data.map(({ id, label, url }) => (
+        <S.MenuOptions key={id}>
+          <Link href={url} passHref>
+            <a>{label}</a>
+          </Link>
+        </S.MenuOptions>
+      ))}
+    </S.Menu>
+  </S.Header>
 )
 
 export default Menu
