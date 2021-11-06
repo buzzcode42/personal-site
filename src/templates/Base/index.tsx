@@ -1,8 +1,15 @@
-import * as S from './styles'
+import { Container, Footer, Menu } from 'components'
 
-const Base = () => (
+import * as S from './styles'
+type BaseProps = {
+  children: React.ReactNode
+}
+
+const Base = ({ children }: BaseProps) => (
   <S.Wrapper>
-    <h1>Base</h1>
+    <Menu />
+    <Container>{children}</Container>
+    <Footer />
   </S.Wrapper>
 )
 
