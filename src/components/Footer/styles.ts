@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-
+import media from 'styled-media-query'
 export const FooterContainer = styled.footer`
   ${({ theme }) => css`
     display: flex;
@@ -11,6 +11,10 @@ export const FooterContainer = styled.footer`
     background-color: ${theme.colors.primary};
     -moz-box-pack: justify;
     -moz-box-align: center;
+
+    ${media.lessThan('medium')`
+      flex-direction: column;
+    `}
   `}
 `
 
@@ -24,6 +28,10 @@ export const FooterRights = styled.header`
       font-weight: normal;
       color: ${theme.colors.white};
     }
+
+    ${media.lessThan('medium')`
+      margin-bottom: 1rem;
+    `}
   `}
 `
 
