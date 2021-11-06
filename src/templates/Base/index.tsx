@@ -1,4 +1,4 @@
-import { Container, Footer, Menu } from 'components'
+import { Footer, Menu } from 'components'
 
 import * as S from './styles'
 type BaseProps = {
@@ -8,7 +8,7 @@ type BaseProps = {
 const Base = ({ children }: BaseProps) => (
   <S.Wrapper>
     <Menu />
-    <Container>{children}</Container>
+    <>{children}</>
     <Footer />
   </S.Wrapper>
 )
