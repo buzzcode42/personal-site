@@ -9,7 +9,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Boilerplate</title>
+        <title>Fernando dos Santos</title>
         <link rel="shortcut icon" href="/img/icon-192.png" />
         <link rel="apple-touch-icon" href="/img/icon-576.png" />
         <link rel="manifest" href="/manifest.json" />
