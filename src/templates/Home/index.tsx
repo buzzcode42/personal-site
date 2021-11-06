@@ -1,9 +1,21 @@
-import * as S from './styles'
+import { CardProps } from 'components/Card'
+import { TextContentProps } from 'components/TextContent'
+import { Article, Banner, Container, Newsletter } from 'components'
+import { Base } from 'templates'
 
-const Home = () => (
-  <S.Wrapper>
-    <h1>Home</h1>
-  </S.Wrapper>
+export type HomeProps = {
+  banner: TextContentProps[]
+  article: CardProps[]
+}
+
+const Home = ({ article, banner }: HomeProps) => (
+  <Base>
+    <Banner items={banner} />
+    <Container>
+      <Article items={article} />
+    </Container>
+    <Newsletter />
+  </Base>
 )
 
 export default Home
