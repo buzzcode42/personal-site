@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.section`
   width: 60%;
@@ -45,6 +46,12 @@ export const Row = styled.div`
 export const Menu = styled.a`
   width: 100%;
   margin: 0 -0.35rem;
+
+  ${media.lessThan('medium')`
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  `}
 `
 export const MenuLink = styled.a`
   padding: 0.75rem 1rem 0.75rem 2rem;
@@ -116,7 +123,8 @@ export const Text = styled.p`
   font-weight: 400;
   width: 30em;
 
-  @media (max-width: 41.667em) {
+  ${media.lessThan('medium')`
     width: 100%;
-  }
+    font-size: 1.2rem;
+  `}
 `
