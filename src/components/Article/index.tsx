@@ -6,24 +6,34 @@ import * as S from './styles'
 
 export type ArticleProps = {
   items: CardProps[]
-  link: string
-  loadMore?: () => void
+  link?: string
+  loadMore?: string
+  homeTitle?: string
+  blogTitle?: string
 }
 
-const Article = ({ items, link, loadMore }: ArticleProps) => (
+const Article = ({
+  items,
+  link,
+  loadMore,
+  homeTitle,
+  blogTitle
+}: ArticleProps) => (
   <S.Wrapper>
-    <Heading>Últimas do blog</Heading>
+    {blogTitle ? (
+      <Heading>{blogTitle}</Heading>
+    ) : (
+      <Heading>{homeTitle}</Heading>
+    )}
     {items.map((item, index) => (
       <Card key={index} {...item} />
     ))}
     <S.LinkWrapper>
       {loadMore ? (
-        <Button onClick={loadMore} fullWidth>
-          Carregar mais
-        </Button>
+        <Button fullWidth>{loadMore}</Button>
       ) : (
         <Button fullWidth>
-          <Link href={link}>Ver todos os posts</Link>
+          <Link href={link!}>Ver todos os posts</Link>
         </Button>
       )}
     </S.LinkWrapper>
