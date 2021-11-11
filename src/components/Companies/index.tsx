@@ -3,9 +3,7 @@ import * as S from './styles'
 
 const Companies = () => (
   <S.Wrapper>
-    <S.Row>
-      <S.Title>Empresas que passei!</S.Title>
-    </S.Row>
+    <S.Title>Empresas que passei!</S.Title>
     <S.Contact>
       <S.Left>
         <S.Text>
