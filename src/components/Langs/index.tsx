@@ -7,11 +7,13 @@ import * as S from './styles'
 const Langs = () => (
   <S.Wrapper>
     {mock.map(({ id, alt, image, url }) => (
-      <Link key={id} href={url} passHref>
-        <a>
-          <Image src={image} alt={alt} width={35} height={35} />
-        </a>
-      </Link>
+      <S.Options key={id}>
+        <Link href={url} passHref>
+          <a>
+            <Image src={image} alt={alt} width={35} height={35} />
+          </a>
+        </Link>
+      </S.Options>
     ))}
   </S.Wrapper>
 )

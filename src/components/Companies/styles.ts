@@ -16,7 +16,7 @@ export const Menu = styled.a`
   ${media.lessThan('medium')`
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   `}
 `
 export const MenuLink = styled.a`

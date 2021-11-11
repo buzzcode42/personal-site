@@ -5,3 +5,6 @@ export const Wrapper = styled.div`
     margin: 0 0.5rem;
   }
 `
+export const Options = styled.li`
+  display: none;
+`
