@@ -9,9 +9,7 @@ export type ArticleProps = {
 
 const Article = ({ items }: ArticleProps) => (
   <S.Wrapper>
-    <S.Row>
-      <Heading>Últimas do blog</Heading>
-    </S.Row>
+    <Heading>Últimas do blog</Heading>
     {items.map((item, index) => (
       <Card key={index} {...item} />
     ))}
