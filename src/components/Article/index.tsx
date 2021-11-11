@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Card, { CardProps } from 'components/Card'
 import { Heading } from 'components'
 
@@ -15,9 +16,11 @@ const Article = ({ items }: ArticleProps) => (
     {items.map((item, index) => (
       <Card key={index} {...item} />
     ))}
-    <S.ViewLink href="/blog">
-      <a>Ver todos os posts</a>
-    </S.ViewLink>
+    <S.LinkWrapper>
+      <Link href="/blog" passHref>
+        <a>Ver todos os posts</a>
+      </Link>
+    </S.LinkWrapper>
   </S.Wrapper>
 )
 
