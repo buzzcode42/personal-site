@@ -22,7 +22,7 @@ export const wrapperModifier = {
     padding: 1rem 1.2rem;
     height: 4.3rem;
     font-size: ${theme.font.sizes.medium};
-    background-color: ${theme.colors.secondary};
+    background-color: rgb(3, 168, 124);
   `,
   disabled: () => css`
     cursor: not-allowed;
