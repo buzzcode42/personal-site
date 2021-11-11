@@ -12,7 +12,7 @@ const Home = ({ article, banner }: HomeProps) => (
   <Base>
     <Banner items={banner} />
     <Container>
-      <Article items={article} />
+      <Article items={article} link="/blog" />
     </Container>
     <Newsletter />
   </Base>

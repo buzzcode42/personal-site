@@ -1,4 +1,4 @@
-import { Container, Article } from 'components'
+import { Container, Article, Newsletter } from 'components'
 import { CardProps } from 'components/Card'
 
 import { Base } from 'templates'
@@ -11,6 +11,7 @@ const Blog = ({ articles }: BlogProps) => (
     <Container>
       <Article items={articles} link="/blog" />
     </Container>
+    <Newsletter />
   </Base>
 )
 export default Blog
