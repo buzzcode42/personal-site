@@ -1,6 +1,5 @@
-import Link from 'next/link'
 import Card, { CardProps } from 'components/Card'
-import { Heading } from 'components'
+import { Button, Heading } from 'components'
 
 import * as S from './styles'
 
@@ -17,9 +16,9 @@ const Article = ({ items }: ArticleProps) => (
       <Card key={index} {...item} />
     ))}
     <S.LinkWrapper>
-      <Link href="/blog" passHref>
-        <a>Ver todos os posts</a>
-      </Link>
+      <Button href="/blo" fullWidth>
+        Ver todos os posts
+      </Button>
     </S.LinkWrapper>
   </S.Wrapper>
 )

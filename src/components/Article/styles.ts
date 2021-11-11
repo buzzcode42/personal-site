@@ -45,31 +45,4 @@ export const Row = styled.div`
     }
   }
 `
-export const LinkWrapper = styled.div`
-  a {
-    display: flex;
-    font-weight: 500;
-    background: rgba(193, 193, 193, 0.06);
-    color: #fff;
-    padding: 1rem 1.2rem;
-    margin-left: 19em;
-    margin-top: 0.3rem;
-    width: 15%;
-    font-size: 0.8rem;
-    border-radius: 0.4rem;
-    border-bottom: 0;
-    white-space: nowrap;
-    text-decoration: none;
-    line-height: 1;
-    cursor: pointer;
-
-    &:hover {
-      background: #202124;
-    }
-
-    ${media.lessThan('medium')`
-      width: 39%;
-      margin-left: 0;
-    `}
-  }
-`
+export const LinkWrapper = styled.div``
