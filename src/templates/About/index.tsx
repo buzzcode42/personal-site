@@ -5,14 +5,15 @@ import { Base } from 'templates'
 export type AboutProps = {
   banner: TextContentProps[]
   about: TextContentProps[]
+  companies: TextContentProps[]
 }
 
-const About = ({ banner, about }: AboutProps) => (
+const About = ({ banner, about, companies }: AboutProps) => (
   <Base>
     <Banner items={banner} />
     <Container>
       <Hi items={about} />
-      <Companies />
+      <Companies items={companies} />
     </Container>
   </Base>
 )
