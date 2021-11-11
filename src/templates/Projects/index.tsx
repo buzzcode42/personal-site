@@ -1,15 +1,18 @@
 import { TextContentProps } from 'components/TextContent'
-import { Banner, Container, Newsletter } from 'components'
+import { CardProps } from 'components/Labs/card'
+
+import { Banner, Newsletter, Labs } from 'components'
 import { Base } from 'templates'
 
 export type ProjectsProps = {
   banner: TextContentProps[]
+  projects: CardProps[]
 }
 
-const Projects = ({ banner }: ProjectsProps) => (
+const Projects = ({ banner, projects }: ProjectsProps) => (
   <Base>
     <Banner items={banner} />
-    <Container></Container>
+    <Labs items={projects} />
     <Newsletter />
   </Base>
 )
