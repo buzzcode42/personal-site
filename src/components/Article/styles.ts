@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.article`
@@ -45,4 +45,12 @@ export const Row = styled.div`
     }
   }
 `
-export const LinkWrapper = styled.div``
+export const LinkWrapper = styled.div`
+  ${({ theme }) => css`
+    a {
+      font-size: 0.9rem;
+      color: ${theme.colors.white};
+      text-decoration: none;
+    }
+  `}
+`
