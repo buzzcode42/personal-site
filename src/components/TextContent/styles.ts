@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.white};
     ${media.greaterThan('medium')`
-      padding: ${theme.spacings.medium};
+      /* padding: ${theme.spacings.medium}; */
       color: ${theme.colors.white};
     `}
 
