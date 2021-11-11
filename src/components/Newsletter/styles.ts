@@ -21,7 +21,7 @@ export const Heading = styled.h2`
   `}
 `
 export const Description = styled.p`
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 3rem;
   color: #fff;
   margin: 0.75rem auto 4.4rem;

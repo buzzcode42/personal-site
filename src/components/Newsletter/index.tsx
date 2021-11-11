@@ -6,7 +6,9 @@ const Newsletter = () => (
   <S.Container>
     <S.Wrapper>
       <S.Heading>Newsletter</S.Heading>
-      <S.Description>Receba os artigos em primeira mão.</S.Description>
+      <S.Description>
+        Seja notificado sempre que um artigo for publicado!
+      </S.Description>
       <S.FormWrapper>
         <form action="#">
           <InputField
