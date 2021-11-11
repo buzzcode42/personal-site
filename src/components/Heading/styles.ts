@@ -29,5 +29,9 @@ export const Wrapper = styled.h2<HeadingProps>`
     color: ${theme.colors[color!]};
 
     ${!!size && wrapperModifiers[size](theme)}
+
+    ${media.lessThan('medium')`
+      text-align: center;
+    `}
   `}
 `
