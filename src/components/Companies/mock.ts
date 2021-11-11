@@ -3,31 +3,31 @@ import { v4 } from 'uuid'
 export default [
   {
     id: v4(),
-    img: '/img/buka.png',
+    img: '/img/brands/buka.png',
     name: 'Buka',
     url: 'https://buka.com/'
   },
   {
     id: v4(),
-    img: '/img/paga3.png',
+    img: '/img/brands/paga3.png',
     name: 'Paga3',
     url: 'https://paga3.com/'
   },
   {
     id: v4(),
-    img: '/img/itgest.svg',
+    img: '/img/brands/itgest.svg',
     name: 'ITGest',
     url: 'https://itgest.ao/'
   },
   {
     id: v4(),
-    img: '/img/ks.svg',
+    img: '/img/brands/ks.svg',
     name: 'Kiandastream',
     url: 'https://kianda.stream.com/'
   },
   {
     id: v4(),
-    img: '/img/ncr.jpg',
+    img: '/img/brands/ncr.jpg',
     name: 'NCR Angola',
     url: 'https://ncrangola.com/'
   }
