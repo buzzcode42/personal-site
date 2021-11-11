@@ -15,7 +15,7 @@ export const wrapperModifiers = {
     font-size: ${theme.font.sizes.xlarge};
 
     ${media.greaterThan('medium')`
-    font-size: ${theme.font.sizes.xxlarge};
+      font-size: ${theme.font.sizes.xxlarge};
     `}
   `,
 
