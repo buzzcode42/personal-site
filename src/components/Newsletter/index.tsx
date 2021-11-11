@@ -15,7 +15,9 @@ const Newsletter = () => (
             type="email"
             icon={<HiOutlineMail />}
           />
-          <Button>Subscrever</Button>
+          <Button size="large" fullWidth>
+            Subscrever
+          </Button>
         </form>
       </S.FormWrapper>
     </S.Wrapper>
