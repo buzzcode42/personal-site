@@ -9,7 +9,7 @@ export type BlogProps = {
 const Blog = ({ articles }: BlogProps) => (
   <Base>
     <Container>
-      <Article items={articles} />
+      <Article items={articles} link="/blog" />
     </Container>
   </Base>
 )

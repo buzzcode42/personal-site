@@ -7,10 +7,10 @@ import * as S from './styles'
 export type ArticleProps = {
   items: CardProps[]
   link: string
-  loadMore: () => void
+  loadMore?: () => void
 }
 
-const Article = ({ items, link = '/blog', loadMore }: ArticleProps) => (
+const Article = ({ items, link, loadMore }: ArticleProps) => (
   <S.Wrapper>
     <Heading>Últimas do blog</Heading>
     {items.map((item, index) => (
