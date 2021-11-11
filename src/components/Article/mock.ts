@@ -4,6 +4,6 @@ export default [
     date: '18 Set 20',
     description:
       'Ontem fui notificado pelo Github que a nova versão 1.0 do Github chegou.',
-    tag: '#github'
+    tags: ['github', 'cli']
   }
 ]
