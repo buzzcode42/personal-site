@@ -6,6 +6,7 @@ export const Wrapper = styled.article`
   flex-direction: column;
   margin-top: 5rem;
   margin-bottom: 3.5rem;
+  width: 50rem;
 
   ${media.lessThan('medium')`
       margin-bottom: 4rem;
