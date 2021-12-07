@@ -12,9 +12,5 @@ module.exports = withPWA({
   },
   images: {
     domains: ['localhost']
-  },
-  i18n: {
-    locales: ['pt', 'en', 'pseudo'],
-    defaultLocale: 'pt'
   }
 })
