@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Languages } from 'components'
-
 import data from './mock'
 import * as S from './styles'
 
@@ -28,7 +26,6 @@ const Menu = () => (
           </Link>
         </S.MenuOptions>
       ))}
-      <Languages />
     </S.Menu>
   </S.Header>
 )
