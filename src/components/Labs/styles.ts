@@ -78,4 +78,5 @@ export const Description = styled.p`
 export const Date = styled.span`
   font-size: 1rem;
   font-weight: 400;
+  color: #949495;
 `

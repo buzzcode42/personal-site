@@ -30,7 +30,13 @@ export default {
     lightGray: '#EAEAEA',
     gray: '#8F8F8F',
     darkGray: '#2E2F42',
-    red: '#FF6347'
+    red: '#FF0042',
+    color1: '#712FC3',
+    color2: '#3695FF',
+    color3: '#FF7800',
+    color4: '#439881',
+    color5: '#A200FF',
+    color6: '#FFF000'
   },
   spacings: {
     xxsmall: '0.8rem',

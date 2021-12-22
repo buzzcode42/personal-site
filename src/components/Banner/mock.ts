@@ -1,7 +1,7 @@
 export default [
   {
-    title: 'Seja bem-vindo Jovem Padawan !! Cavaleiro Jedi ',
+    title: 'Universo Front-end e Tudo mais!',
     content:
-      '<p>Um blog sobre o Universo Frontend. Quero por meio desse blog compartilhar tudo que venho aprendendo sobre Frontend e Programação no Geral. Cole junto!</p>'
+      '<p>Software Developer na Creative Labs, escrevo sobre Front-end e tudo mais.</p>'
   }
 ]

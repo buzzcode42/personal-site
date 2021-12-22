@@ -21,3 +21,11 @@ export default [
     link: 'https://github.com/buzzcode42'
   }
 ]
+
+export const labMock = [
+  {
+    title: 'Lab',
+    content:
+      '<p>Projetinhos que desenvolvo para testar alguma tecnologia nova ou para clientes.</p>'
+  }
+]

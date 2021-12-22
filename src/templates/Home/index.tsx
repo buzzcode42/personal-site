@@ -1,6 +1,6 @@
 import { CardProps } from 'components/Card'
 import { TextContentProps } from 'components/TextContent'
-import { Article, Banner, Container, Newsletter } from 'components'
+import { Article, Banner, Container } from 'components'
 import { Base } from 'templates'
 
 export type HomeProps = {
@@ -14,7 +14,6 @@ const Home = ({ article, banner }: HomeProps) => (
     <Container>
       <Article items={article} link="/blog" homeTitle="Últimas do blog" />
     </Container>
-    <Newsletter />
   </Base>
 )
 

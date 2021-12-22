@@ -1,13 +1,16 @@
-import { Container, Article, Newsletter } from 'components'
+import { Banner, Container, Article } from 'components'
 import { CardProps } from 'components/Card'
+import { TextContentProps } from 'components/TextContent'
 
 import { Base } from 'templates'
 
 export type BlogProps = {
   articles: CardProps[]
+  banner: TextContentProps[]
 }
-const Blog = ({ articles }: BlogProps) => (
+const Blog = ({ articles, banner }: BlogProps) => (
   <Base>
+    <Banner items={banner} />
     <Container>
       <Article
         items={articles}
@@ -15,7 +18,6 @@ const Blog = ({ articles }: BlogProps) => (
         blogTitle="Todos os artigos"
       />
     </Container>
-    <Newsletter />
   </Base>
 )
 export default Blog

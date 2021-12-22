@@ -23,7 +23,7 @@ export const FooterRights = styled.header`
     /*flex: 0.2 1 0%;*/
     -moz-box-pack: start;
     > h4 {
-      font-size: ${theme.font.sizes.small};
+      font-size: ${theme.font.sizes.xsmall};
       line-height: 2rem;
       font-weight: normal;
       color: ${theme.colors.white};

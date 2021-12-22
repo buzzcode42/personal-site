@@ -1,5 +1,5 @@
 import { TextContentProps } from 'components/TextContent'
-import { Container, Hi, Companies, Newsletter } from 'components'
+import { Container, Hi, Companies } from 'components'
 import { Base } from 'templates'
 
 export type AboutProps = {
@@ -13,7 +13,6 @@ const About = ({ about, companies }: AboutProps) => (
       <Hi items={about} />
       <Companies items={companies} />
     </Container>
-    <Newsletter />
   </Base>
 )
 

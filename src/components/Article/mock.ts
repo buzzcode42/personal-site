@@ -7,3 +7,11 @@ export default [
     tags: ['github', 'cli']
   }
 ]
+
+export const banner = [
+  {
+    title: 'Blog',
+    content:
+      '<p>Comecei a escrver tem pouco tempo ainda,escrevo principalmente sobre desenvolvimento de Software de vez enquando, também escrevo sobre outros assuntos relevantes.</p>'
+  }
+]
