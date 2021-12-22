@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.white};
     ${media.greaterThan('medium')`
-      padding: ${theme.spacings.medium};
+      /* padding: ${theme.spacings.medium}; */
       color: ${theme.colors.white};
     `}
 
@@ -22,8 +22,19 @@ export const Wrapper = styled.div`
       `}
     }
 
+    h2 {
+      ${media.lessThan('medium')`
+        text-align: center;
+      `}
+    }
+
     p {
       margin-bottom: ${theme.spacings.xsmall};
+
+      ${media.lessThan('medium')`
+        font-size: ${theme.font.sizes.small};
+        text-align: center;
+      `}
     }
 
     a {

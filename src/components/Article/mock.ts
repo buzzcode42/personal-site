@@ -4,6 +4,14 @@ export default [
     date: '18 Set 20',
     description:
       'Ontem fui notificado pelo Github que a nova versão 1.0 do Github chegou.',
-    tag: '#github'
+    tags: ['github', 'cli']
+  }
+]
+
+export const banner = [
+  {
+    title: 'Blog',
+    content:
+      '<p>Comecei a escrver tem pouco tempo ainda,escrevo principalmente sobre desenvolvimento de Software de vez enquando, também escrevo sobre outros assuntos relevantes.</p>'
   }
 ]

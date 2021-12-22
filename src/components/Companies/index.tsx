@@ -1,19 +1,17 @@
+import TextContent, { TextContentProps } from 'components/TextContent'
+
 import data from './mock'
 import * as S from './styles'
 
-const Companies = () => (
+export type CompaniesProps = {
+  items: TextContentProps[]
+}
+
+const Companies = ({ items }: CompaniesProps) => (
   <S.Wrapper>
-    <S.Row>
-      <S.Title>Empresas que passei!</S.Title>
-    </S.Row>
-    <S.Contact>
-      <S.Left>
-        <S.Text>
-          Talk to me through my social networks, no need to worry because I will
-          get back to you as soon as possible.
-        </S.Text>
-      </S.Left>
-    </S.Contact>
+    {items.map((item, index) => (
+      <TextContent key={index} {...item} />
+    ))}
     <S.Menu>
       {data.map(({ id, name, url, img }) => (
         <S.MenuLink key={id} href={url}>

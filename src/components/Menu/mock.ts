@@ -2,6 +2,11 @@ import { v4 } from 'uuid'
 export default [
   {
     id: v4(),
+    label: 'Home',
+    url: '/'
+  },
+  {
+    id: v4(),
     label: 'Hi',
     url: '/hi'
   },
@@ -9,6 +14,11 @@ export default [
     id: v4(),
     label: 'Blog',
     url: '/blog'
+  },
+  {
+    id: v4(),
+    label: 'Snippets',
+    url: '/snippets'
   },
   {
     id: v4(),

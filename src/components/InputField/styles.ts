@@ -17,7 +17,7 @@ export const InputWrapper = styled.div`
     border-color: ${theme.colors.lightGray};
 
     &:focus-within {
-      box-shadow: 0 0 0.5rem ${theme.colors.primary};
+      box-shadow: 0 0 0.5rem ${theme.colors.white};
     }
   `}
 `
@@ -27,7 +27,7 @@ export const Input = styled.input<IconPositionProps>`
     color: ${theme.colors.primary};
     font-family: ${theme.font.family};
     font-size: ${theme.font.sizes.medium};
-    padding: ${theme.spacings.xxsmall} 0;
+    padding: 1rem 1.2rem;
     padding-${iconPosition}: ${theme.spacings.xsmall};
     background: transparent;
     border: 0;

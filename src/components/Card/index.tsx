@@ -4,11 +4,11 @@ export type CardProps = {
   date: string
   title: string
   description: string
-  tag: string
+  tags: string[]
   slug: string
 }
 
-const Card = ({ date, title, description, tag, slug }: CardProps) => (
+const Card = ({ date, title, description, tags, slug }: CardProps) => (
   <S.CardWrapper href={`/blog/${slug}`}>
     <S.ArticleTitle>
       <S.ArticleDate>{date}</S.ArticleDate>
@@ -16,7 +16,9 @@ const Card = ({ date, title, description, tag, slug }: CardProps) => (
       <S.ArticleMiddle>{description}</S.ArticleMiddle>
     </S.ArticleTitle>
     <S.ArticleList>
-      <S.ArticleCategory>{tag}</S.ArticleCategory>
+      {tags.map((tag, index) => (
+        <S.ArticleCategory key={index}>{tag}</S.ArticleCategory>
+      ))}
     </S.ArticleList>
   </S.CardWrapper>
 )
