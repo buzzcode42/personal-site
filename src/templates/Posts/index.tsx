@@ -4,11 +4,11 @@ import { TextContentProps } from 'components/TextContent'
 
 import { Base } from 'templates'
 
-export type BlogProps = {
+export type PostsProps = {
   articles: CardProps[]
   banner: TextContentProps[]
 }
-const Blog = ({ articles, banner }: BlogProps) => (
+const Posts = ({ articles, banner }: PostsProps) => (
   <Base>
     <Banner items={banner} />
     <Container>
@@ -20,4 +20,4 @@ const Blog = ({ articles, banner }: BlogProps) => (
     </Container>
   </Base>
 )
-export default Blog
+export default Posts

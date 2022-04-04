@@ -29,38 +29,41 @@ export const Menu = styled.ul`
     font-weight: ${theme.font.light};
   `}
 `
-export const MenuOptions = styled.li`
-  padding: 0.5rem 0;
-  .active {
-    background: #202124;
-  }
-  &:last-of-type {
-    margin-right: -0.6rem;
-
-    @media (min-width: 66.667em) {
-      margin-right: 0;
-    }
-  }
-
-  a {
-    background: transparent;
-    text-decoration: none;
-    border-radius: 0.3rem;
-    padding: 0.6rem;
-    margin: 0 0.25rem;
-    color: rgba(0, 0, 0, 0.7);
-    border-bottom: none;
-    font-weight: 400;
-    font-size: 0.95rem;
-    color: #fff;
-
-    &:hover {
-      background: #202124;
+export const MenuOption = styled.li`
+  ${({ theme }) => css`
+    padding: 0.5rem 0;
+    .active {
+      background: ${theme.colors.background};
     }
 
-    @media (min-width: 66.667em) {
-      padding: 1rem 1.5rem;
-      font-size: 1.1rem;
+    &:last-of-type {
+      margin-right: -0.6rem;
+
+      @media (min-width: 66.667em) {
+        margin-right: 0;
+      }
     }
-  }
+
+    a {
+      background: transparent;
+      text-decoration: none;
+      border-radius: 0.3rem;
+      padding: 0.6rem;
+      margin: 0 0.25rem;
+      color: rgba(0, 0, 0, 0.7);
+      border-bottom: none;
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: ${theme.colors.white};
+
+      &:hover {
+        background: ${theme.colors.background};
+      }
+
+      @media (min-width: 66.667em) {
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+      }
+    }
+  `}
 `

@@ -7,15 +7,20 @@ const Footer = () => {
   return (
     <S.FooterContainer>
       <S.FooterRights>
-        <h4>
+        <S.Copyright>
           Fernando dos Santos {currentDate} © Todos os direitos reservados
-        </h4>
+        </S.Copyright>
       </S.FooterRights>
       <S.FooterSocial>
-        {social.map(({ url, aria, icon, target }) => (
-          <a key={aria} href={url} target={target} arial-label={aria}>
+        {social.map(({ url, aria, icon, target, id }) => (
+          <S.Link
+            key={id.toString()}
+            href={url}
+            target={target}
+            arial-label={aria.toString()}
+          >
             {icon}
-          </a>
+          </S.Link>
         ))}
       </S.FooterSocial>
     </S.FooterContainer>

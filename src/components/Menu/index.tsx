@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import data from './mock'
+import navigation from 'constants/menu'
 import * as S from './styles'
 
 const Menu = () => (
@@ -19,12 +19,12 @@ const Menu = () => (
       </Link>
     </S.LinkWrapper>
     <S.Menu>
-      {data.map(({ id, label, url }) => (
-        <S.MenuOptions key={id}>
-          <Link href={url} passHref>
-            <a>{label}</a>
+      {navigation.map(({ id, name, route }) => (
+        <S.MenuOption key={id.toString()}>
+          <Link href={route.toString()} passHref>
+            <a>{name}</a>
           </Link>
-        </S.MenuOptions>
+        </S.MenuOption>
       ))}
     </S.Menu>
   </S.Header>

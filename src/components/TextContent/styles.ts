@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.white};
     ${media.greaterThan('medium')`
-      /* padding: ${theme.spacings.medium}; */
       color: ${theme.colors.white};
     `}
 
@@ -16,13 +15,20 @@ export const Wrapper = styled.div`
     h5,
     h6 {
       color: ${theme.colors.white};
-      margin: ${theme.spacings.xsmall} 0;
+      margin: ${theme.spacings.xxsmall} 0;
+      font-weight: ${theme.font.bold};
+
       ${media.greaterThan('medium')`
         color: ${theme.colors.white};
       `}
     }
 
+    h1 {
+      font-size: ${theme.font.sizes.xxlarge};
+    }
+
     h2 {
+      font-size: ${theme.font.sizes.xlarge};
       ${media.lessThan('medium')`
         text-align: center;
       `}

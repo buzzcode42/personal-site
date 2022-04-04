@@ -6,11 +6,11 @@ type LabsProps = {
 }
 
 const Labs = ({ items }: LabsProps) => (
-  <S.Container>
+  <S.Wrapper>
     {items.map((item, index) => (
       <Card key={index} {...item} />
     ))}
-  </S.Container>
+  </S.Wrapper>
 )
 
 export default Labs

@@ -7,15 +7,15 @@ export type BannerProps = {
 }
 
 const Banner = ({ items }: BannerProps) => (
-  <S.Container>
+  <S.Wrapper>
     <S.Inner>
-      <S.InnerContent>
+      <S.Content>
         {items.map((item, index) => (
           <TextContent key={index} {...item} />
         ))}
-      </S.InnerContent>
+      </S.Content>
     </S.Inner>
-  </S.Container>
+  </S.Wrapper>
 )
 
 export default Banner

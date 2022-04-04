@@ -3,7 +3,6 @@ import React, {
   ButtonHTMLAttributes,
   forwardRef
 } from 'react'
-
 import * as S from './styles'
 
 type ButtonTypes =
@@ -14,15 +13,33 @@ export type ButtonProps = {
   as?: React.ElementType
   fullWidth?: boolean
   icon?: JSX.Element
+  minimal?: boolean
   size?: 'small' | 'medium' | 'large'
+  backgroundColor?: 'red' | 'secondary' | 'primary'
+  color?: 'white' | 'black'
 } & ButtonTypes
 
-const Button: React.ForwardRefRenderFunction<S.ButtonStyleProps, ButtonProps> =
-  ({ children, size = 'medium', fullWidth = 'false', icon, ...props }, ref) => (
+const Button: React.ForwardRefRenderFunction<S.ButtonStyledProps, ButtonProps> =
+  (
+    {
+      children,
+      fullWidth = false,
+      icon,
+      minimal = false,
+      size = 'medium',
+      color = 'dark',
+      backgroundColor = 'red',
+      ...props
+    },
+    ref
+  ) => (
     <S.Wrapper
+      backgroundColor={backgroundColor}
       size={size}
+      minimal={minimal}
       fullWidth={fullWidth}
       hasIcon={!!icon}
+      color={color}
       ref={ref}
       {...props}
     >

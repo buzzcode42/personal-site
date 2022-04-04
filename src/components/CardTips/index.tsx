@@ -2,31 +2,25 @@ import Link from 'next/link'
 
 import * as S from './styles'
 
-export type CardProps = {
-  date: string
+export type CardTipsProps = {
   title: string
+  image: string
   description: string
-  tags: string[]
   slug: string
 }
 
-const Card = ({ date, title, description, tags, slug }: CardProps) => (
+const CardTips = ({ title, image, description, slug }: CardTipsProps) => (
   <S.Wrapper>
     <Link href={`/post/${slug}`} passHref>
       <S.Link>
         <S.Title>
-          <S.CreatedAt>{date}</S.CreatedAt>
+          <S.Image src={image} alt={title} role="img" />
           {title}
           <S.Description>{description}</S.Description>
         </S.Title>
-        <S.Tags>
-          {tags.map((tag, index) => (
-            <S.TagOption key={index}>{tag}</S.TagOption>
-          ))}
-        </S.Tags>
       </S.Link>
     </Link>
   </S.Wrapper>
 )
 
-export default Card
+export default CardTips

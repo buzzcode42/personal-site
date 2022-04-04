@@ -1,37 +1,46 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import media from 'styled-media-query'
 
 import { ButtonProps } from '.'
 
-export type ButtonStyleProps = {
+export type ButtonStyledProps = {
   hasIcon: boolean
-} & Pick<ButtonProps, 'size' | 'fullWidth'>
+} & Pick<
+  ButtonProps,
+  'size' | 'fullWidth' | 'minimal' | 'backgroundColor' | 'color'
+>
 
-export const wrapperModifier = {
+const wrapperModifiers = {
   small: (theme: DefaultTheme) => css`
-    height: 2.5rem;
+    height: 3rem;
     font-size: ${theme.font.sizes.xsmall};
   `,
-  medium: () => css`
-    padding: 0.7rem 1rem;
-    height: 3.5rem;
-    font-size: 0.9rem;
-    background: rgba(193, 193, 193, 0.06);
+  medium: (theme: DefaultTheme) => css`
+    height: 4rem;
+    font-size: ${theme.font.sizes.small};
+    padding: ${theme.spacings.xxsmall} ${theme.spacings.medium};
+  `,
+  minimal: (theme: DefaultTheme) => css`
+    background: none;
+    color: ${theme.colors.primary};
+
+    &:hover {
+      color: ${theme.colors.primary};
+    }
+  `,
+
+  disabled: () => css`
+    &:disabled {
+      cursor: not-allowed;
+      filter: saturate(30%);
+    }
   `,
   large: (theme: DefaultTheme) => css`
-    padding: 1rem 1.2rem;
-    height: 4.3rem;
+    height: 6rem;
     font-size: ${theme.font.sizes.medium};
-    background-color: rgb(3, 168, 124);
-  `,
-  disabled: () => css`
-    cursor: not-allowed;
-    filter: saturate(30%);
+    padding: ${theme.spacings.xxsmall} ${theme.spacings.xlarge};
   `,
   fullWidth: () => css`
-    ${media.lessThan('medium')`
-      width: 100%;
-    `}
+    width: 100%;
   `,
   withIcon: (theme: DefaultTheme) => css`
     svg {
@@ -41,31 +50,45 @@ export const wrapperModifier = {
         margin-left: ${theme.spacings.xxsmall};
       }
     }
+  `,
+  primary: (theme: DefaultTheme) => css`
+    background-color: ${theme.colors.background};
+  `,
+  red: (theme: DefaultTheme) => css`
+    background-color: ${theme.colors.red};
+  `,
+  secondary: (theme: DefaultTheme) => css`
+    background-color: ${theme.colors.secondary};
   `
 }
 
-export const Wrapper = styled.button<ButtonStyleProps>`
-  ${({ theme, size, fullWidth, hasIcon, disabled }) => css`
-    width: 14rem;
-    border: none;
-    outline: none;
-    color: ${theme.colors.white};
-    transition: background-color 0.3s ease-out;
-    min-width: 122px;
-    text-align: center;
-    line-height: 40px;
-    font-weight: 400;
+export const Wrapper = styled.button<ButtonStyledProps>`
+  ${({
+    theme,
+    size,
+    fullWidth,
+    hasIcon,
+    minimal,
+    disabled,
+    backgroundColor,
+    color
+  }) => css`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: ${theme.colors[color!]};
+    font-family: ${theme.font.family};
+    border: 0;
     cursor: pointer;
+    border-radius: ${theme.border.radius};
+    padding: ${theme.spacings.xxsmall};
     text-decoration: none;
 
-    ${!!size && wrapperModifier[size](theme)};
-    ${!!fullWidth && wrapperModifier.fullWidth()};
-    ${!!hasIcon && wrapperModifier.withIcon(theme)};
-    ${!!disabled && wrapperModifier.disabled()};
-
-    ${media.lessThan('medium')`
-      width: 100%;
-      margin-top: 0.3rem;
-    `}
+    ${!!size && wrapperModifiers[size](theme)};
+    ${!!fullWidth && wrapperModifiers.fullWidth()};
+    ${!!hasIcon && wrapperModifiers.withIcon(theme)};
+    ${!!minimal && wrapperModifiers.minimal(theme)};
+    ${!!backgroundColor && wrapperModifiers[backgroundColor](theme)};
+    ${disabled && wrapperModifiers.disabled()};
   `}
 `

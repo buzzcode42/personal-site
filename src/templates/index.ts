@@ -1,5 +1,5 @@
 export { default as About } from './About'
 export { default as Base } from './Base'
-export { default as Blog } from './Blog'
 export { default as Home } from './Home'
-export { default as Snippets } from './Snippets'
+export { default as Posts } from './Posts'
+export { default as Tips } from './Tips'

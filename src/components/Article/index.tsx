@@ -30,9 +30,11 @@ const Article = ({
     ))}
     <S.LinkWrapper>
       {loadMore ? (
-        <Button fullWidth>{loadMore}</Button>
+        <Button size="medium" color="white" backgroundColor="primary">
+          {loadMore}
+        </Button>
       ) : (
-        <Button fullWidth>
+        <Button size="medium" color="white" backgroundColor="primary">
           <Link href={link!}>Ver todos os posts</Link>
         </Button>
       )}

@@ -1,29 +1,29 @@
 import { HiOutlineMail } from 'react-icons/hi'
-import { Button, InputField } from 'components'
+
+import { Button, TextField } from 'components'
+
 import * as S from './styles'
 
 const Newsletter = () => (
-  <S.Container>
-    <S.Wrapper>
-      <S.Heading>Newsletter</S.Heading>
-      <S.Description>
-        Seja notificado sempre que um artigo for publicado!
-      </S.Description>
-      <S.FormWrapper>
-        <form action="#">
-          <InputField
-            name="email"
-            placeholder="Email"
-            type="email"
-            icon={<HiOutlineMail />}
-          />
-          <Button size="large" fullWidth>
-            Subscrever
-          </Button>
-        </form>
-      </S.FormWrapper>
-    </S.Wrapper>
-  </S.Container>
+  <S.Wrapper>
+    <S.Heading>Newsletter</S.Heading>
+    <S.Description>
+      Seja notificado sempre que um artigo for publicado!
+    </S.Description>
+    <S.FormWrapper>
+      <S.Form action="#">
+        <TextField
+          name="email"
+          placeholder="Email"
+          type="email"
+          icon={<HiOutlineMail />}
+        />
+        <Button size="medium" backgroundColor="secondary" color="white">
+          Subscrever
+        </Button>
+      </S.Form>
+    </S.FormWrapper>
+  </S.Wrapper>
 )
 
 export default Newsletter

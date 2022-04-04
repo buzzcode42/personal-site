@@ -9,14 +9,14 @@ export type CardProps = {
 }
 const Card = ({ image, title, description, link, date }: CardProps) => {
   return (
-    <S.Wrapper href={link} target="_blank">
+    <S.Link href={link} target="_blank">
       <S.ImageWrapper>
         <img src={image} alt={title} />
       </S.ImageWrapper>
-      <S.Date>{date}</S.Date>
+      <S.CreatedAt>{date}</S.CreatedAt>
       <S.Title>{title}</S.Title>
       <S.Description>{description}</S.Description>
-    </S.Wrapper>
+    </S.Link>
   )
 }
 

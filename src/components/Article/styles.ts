@@ -2,14 +2,16 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.article`
-  display: flex;
-  flex-direction: column;
-  margin-top: 5rem;
-  margin-bottom: 3.5rem;
-  width: 50rem;
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    margin-top: ${theme.spacings.xlarge};
+    margin-bottom: ${theme.spacings.medium};
+    width: 50rem;
 
-  ${media.lessThan('medium')`
-      margin-bottom: 4rem;
+    ${media.lessThan('medium')`
+      margin-bottom: ${theme.spacings.large};
+  `}
   `}
 `
 export const LinkWrapper = styled.div`

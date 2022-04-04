@@ -10,8 +10,6 @@ export const Wrapper = styled.article`
     position: relative;
     border: 1px solid ${theme.colors.background};
     margin: 0 auto;
-    margin-bottom: ${theme.spacings.xxsmall};
-    margin-top: ${theme.spacings.xxsmall};
 
     &:before {
       content: '';
@@ -24,7 +22,6 @@ export const Wrapper = styled.article`
       z-index: -1;
       left: 50%;
       top: 50%;
-
       transform: translate(-50%, -50%);
 
       @media (min-width: 66.667em) {
@@ -36,11 +33,6 @@ export const Wrapper = styled.article`
     @media (max-width: 41.667em) {
       width: 100%;
       margin-left: 0;
-    }
-
-    &:hover {
-      cursor: pointer;
-      border: 1px solid ${theme.colors.white};
     }
 
     @media (min-width: 66.667) {
@@ -58,21 +50,15 @@ export const Wrapper = styled.article`
     }
   `}
 `
-export const Link = styled.a`
-  ${({ theme }) => css`
-    text-decoration: none;
-    font-weight: ${theme.font.normal};
-  `}
-`
-export const Title = styled.h2`
+export const Title = styled.h1`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
     font-size: ${theme.font.sizes.small};
     text-decoration: none;
-    font-weight: ${theme.font.bold};
+    font-weight: ${theme.font.normal};
     color: ${theme.colors.white};
-    margin-bottom: ${theme.spacings.xxsmall};
+    margin-bottom: ${theme.spacings.small};
 
     @media (min-width: 66.667em) {
       margin-bottom: 0;
@@ -88,11 +74,12 @@ export const Title = styled.h2`
     }
   `}
 `
-export const CreatedAt = styled.small`
-  ${({ theme }) => css`
-    color: ${theme.colors.gray};
-    font-size: ${theme.font.sizes.xsmall};
-    font-weight: ${theme.font.normal};
+export const Image = styled.img`
+  ${() => css`
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.5rem;
   `}
 `
 export const Description = styled.small`
@@ -100,34 +87,12 @@ export const Description = styled.small`
     color: ${theme.colors.gray};
     font-size: ${theme.font.sizes.xsmall};
     font-weight: ${theme.font.normal};
+    line-height: 1.5;
   `}
 `
-export const Tags = styled.div`
-  ${() => css`
-    display: block;
-    flex: 1;
-
-    @media (min-width: 66.667em) {
-      text-align: left;
-    }
-  `}
-`
-export const TagOption = styled.p`
+export const Link = styled.a`
   ${({ theme }) => css`
-    display: inline-flex;
-    font-weight: 500;
-    background: rgba(193, 193, 193, 0.6);
-    color: ${theme.colors.white};
-    margin-top: 0.7rem;
-    margin-right: 0.2rem;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-    border-radius: 3rem;
-    border-bottom: 0;
-    white-space: nowrap;
-    line-height: 1;
-    @media (min-width: 66.667em) {
-      background: linear-gradient(transparent 0, #636e9a 0);
-    }
+    font-weight: ${theme.font.normal};
+    text-decoration: none;
   `}
 `

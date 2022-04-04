@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
-export const Container = styled.section`
+
+export const Wrapper = styled.section`
   ${({ theme }) => css`
     position: relative;
     padding: 0 4vw;
@@ -9,22 +10,26 @@ export const Container = styled.section`
   `}
 `
 export const Inner = styled.div`
-  padding: 0;
-  width: 100%;
-  max-width: 1170px;
-  margin: 0 auto;
+  ${() => css`
+    padding: 0;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
 
-  @media (min-width: 1280px) {
-    padding: 0 40px;
-  }
+    @media (min-width: 1280px) {
+      padding: 0 40px;
+    }
+  `}
 `
-export const InnerContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
-  padding: 11vw 4vw;
-  max-height: 350px;
-  text-align: center;
+export const Content = styled.div`
+  ${() => css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    padding: 11vw 4vw;
+    max-height: 350px;
+    text-align: center;
+  `}
 `

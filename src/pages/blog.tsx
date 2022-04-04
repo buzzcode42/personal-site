@@ -1,8 +1,8 @@
 import articlesMock, { banner } from 'components/Article/mock'
 
-import Blog, { BlogProps } from 'templates/Blog'
-export default function Index(props: BlogProps) {
-  return <Blog {...props} />
+import Posts, { PostsProps } from 'templates/Posts'
+export default function Index(props: PostsProps) {
+  return <Posts {...props} />
 }
 export async function getStaticProps() {
   return {

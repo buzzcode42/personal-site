@@ -1,5 +1,5 @@
 import aboutmock from 'components/Hi/mock'
-import { companiesMock } from 'components/Companies/mock'
+import companiesMock from 'components/Companies/mock'
 import About, { AboutProps } from 'templates/About'
 
 export default function Index(props: AboutProps) {

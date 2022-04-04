@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
+
 export const FooterContainer = styled.footer`
   ${({ theme }) => css`
     display: flex;
@@ -19,31 +20,38 @@ export const FooterContainer = styled.footer`
 `
 
 export const FooterRights = styled.header`
-  ${({ theme }) => css`
-    /*flex: 0.2 1 0%;*/
-    -moz-box-pack: start;
-    > h4 {
-      font-size: ${theme.font.sizes.xsmall};
-      line-height: 2rem;
-      font-weight: normal;
-      color: ${theme.colors.white};
-    }
-
+  ${() => css`
     ${media.lessThan('medium')`
       margin-bottom: 1rem;
     `}
   `}
 `
+export const Copyright = styled.p`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xsmall};
+    line-height: 1.5;
+    font-weight: normal;
+    color: ${theme.colors.white};
+    text-align: center;
+  `}
+`
 
 export const FooterSocial = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex: 0.2 1 0%;
-  width: 70%;
-  > a {
+  ${() => css`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0.2 1 0%;
+
+    ${media.greaterThan('medium')`
+      width: 70%;
+    `}
+  `}
+`
+export const Link = styled.a`
+  ${({ theme }) => css`
     margin: 0px 0.3rem;
-    font-size: 2rem;
+    font-size: ${theme.font.sizes.xlarge};
     cursor: pointer;
-  }
+  `}
 `
