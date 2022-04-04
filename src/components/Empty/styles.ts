@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components'
 
-import { Heading, Description, Container } from 'components/Newsletter/styles'
+import {
+  Heading,
+  Description,
+  Wrapper as Container
+} from 'components/Newsletter/styles'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -18,13 +22,19 @@ export const Wrapper = styled.div`
   `}
 `
 export const Title = styled.h1`
-  font-size: 3.4rem;
-  ${Heading}
+  ${() => css`
+    font-size: 3.4rem;
+    ${Heading}
+  `}
 `
 export const Text = styled.p`
-  margin-bottom: 2rem;
-  ${Description}
+  ${() => css`
+    margin-bottom: 2rem;
+    ${Description}
+  `}
 `
 export const EmptyContainer = styled.div`
-  ${Container}
+  ${() => css`
+    ${Container}
+  `}
 `

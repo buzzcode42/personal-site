@@ -10,7 +10,7 @@ const Empty = () => (
         Ooopa! A página não existe, que tal dar uma olhada em alguns posts
         bacanas que tenho compartilhado
       </S.Text>
-      <Button size="large" fullWidth>
+      <Button size="medium" backgroundColor="secondary" color="white">
         <Link href="/blog">
           <a>Posts do Blog</a>
         </Link>
